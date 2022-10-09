@@ -1,0 +1,36 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.special {
+    @apply bg-main px-4 rounded-2xl min-h-[2.25rem] min-w-[4rem] max-w-fit inline-flex items-center justify-center hover:scale-105 hover:bg-main-dark transition-all !important;
+}
+
+#sveltebody > div {
+    @apply w-screen h-[50vh] flex flex-col items-center justify-center;
+}
+
+#sveltebody > div * {
+    @apply select-none;
+}
+
+#sveltebody > div > span:first-of-type {
+    @apply text-4xl font-extrabold mb-4;
+}
+
+#sveltebody > div > span:nth-last-of-type(2) {
+    @apply special mt-4;
+}
+
+#sveltebody > div > span:last-of-type {
+    @apply mt-4;
+}
+
+a {
+    @apply special;
+}
+
+body {
+    @apply bg-slate-900 text-slate-50;
+}
